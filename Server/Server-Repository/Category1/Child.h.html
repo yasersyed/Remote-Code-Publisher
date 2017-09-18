@@ -1,0 +1,103 @@
+<!-----------------------------------------------------------------
+ Child.h.html
+ Published: Tue May  2 20:43:27 2017
+ Syed Yaser Ahmed Syed, CS687 - Object Oriented Design, Spring 2017
+------------------------------------------------------------------>
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="./Resources/stylesheet.css"/>
+	<script src=" ./Resources/jquery-1.9.1.js "></script>
+	<script src="./Resources/bonustoggle.js"></script>
+</head>
+<body>
+<h3>Child.h</h3>
+<hr>
+<div class = indent>
+<ul>
+<li>You can download this file by clicking <a href="file:///C:\Users\YaserSyed\Desktop\Project4_v_7\Project4\Server\Server-Repository\Category1\Child.h">here</a></li>
+<li>Optional Requirement: Click highlighted text to open global functions, methods and classes</li>
+</ul>
+<h4>Dependencies:</h4>
+<a href = Child.cpp.html>Child.cpp</a><br>
+</div>
+</hr>
+<hr>
+<pre>
+#ifndef CHILD_H
+#define CHILD_H
+
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;map&gt;
+
+
+int globalData = 10;
+
+namespace ChildTest {
+	
+	struct element {
+		std::string name, type;
+		int start_line, end_line;
+		std::vector&lt;element&gt; children;
+	};
+	enum Numbers { one = 1, two, three, four };
+<div class="div">	class Child {</div><div class="toggle">
+	public:
+		Child() {};
+		~Child() {};
+<div class="div">		void inlineMethod(int a) {</div><div class="toggle">
+			int i;
+			for (i = 0; i &lt; 2; i++) {
+				std::cout &lt;&lt; a;
+				if (i == 1)
+				{
+					std::cout &lt;&lt; i;
+				}
+			}
+			if (i == 1) {
+				std::cout &lt;&lt; a;
+			}
+			else
+			{
+			}
+		}</div>
+		int method1();
+		int method3();
+		int method2()
+<div class="div">		{</div><div class="toggle">
+			std::cout &lt;&lt; "Hello OOD";
+			return 0;
+		}</div>
+		int method4();
+	};</div>
+	
+
+
+<div class="div">	static void globalFunction() {</div><div class="toggle">
+		std::map&lt;int, int&gt; map = { { 1,1 },{ 2,2 } };
+		while (true) {
+			{
+				std::cout &lt;&lt; "\n Global Function";
+			}
+			break;
+		}
+	}</div>
+}
+
+<div class="div">static void globalFunction1() {</div><div class="toggle">
+	std::map&lt;int, int&gt; map = { { 1,1 },{ 2,2 } };
+	while (true) {
+		{
+			std::cout &lt;&lt; "\n Global Function";
+		}
+		break;
+	}
+}</div>
+#endif
+
+
+</pre>
+</hr>
+</body>
+</html>

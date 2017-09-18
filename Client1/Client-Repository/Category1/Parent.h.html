@@ -1,0 +1,77 @@
+<!-----------------------------------------------------------------
+ Parent.h.html
+ Published: Tue May  2 19:14:17 2017
+ Syed Yaser Ahmed Syed, CS687 - Object Oriented Design, Spring 2017
+------------------------------------------------------------------>
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="./Resources/stylesheet.css"/>
+	<script src=" ./Resources/jquery-1.9.1.js "></script>
+	<script src="./Resources/bonustoggle.js"></script>
+</head>
+<body>
+<h3>Parent.h</h3>
+<hr>
+<div class = indent>
+<ul>
+<li>You can download this file by clicking <a href="file:///C:\Users\YaserSyed\Desktop\Project4_v_7\Project4\Server\Server-Repository\Category1\Parent.h">here</a></li>
+<li>Optional Requirement: Click highlighted text to open global functions, methods and classes</li>
+</ul>
+<h4>Dependencies:</h4>
+<a href = Child.h.html>Child.h</a><br>
+</div>
+</hr>
+<hr>
+<pre>
+#ifndef SCOPESTACK_H
+#define SCOPESTACK_H
+#pragma once
+
+
+#include "Child2.h"
+#include "Child.h"
+#include "Invalid.h"
+#include &lt;list&gt;
+
+
+namespace parent1
+{
+	namespace parent2
+	{
+		template&lt;typename T&gt;
+<div class="div">		class Parent {</div><div class="toggle">
+			using namespace ChildTest;
+		public:
+			void push(const T& item);
+			T pop();
+		private:
+			data d;
+			std::list&lt;T&gt; stack;
+			Child child;
+		};</div>
+
+
+		template&lt;class T&gt;
+		void Parent&lt;T&gt;::push(const T& item)
+<div class="div">		{</div><div class="toggle">
+			stack.push_back(item);
+		}
+</div>
+		template&lt;class T&gt;
+		T Parent&lt;T&gt;::pop()
+<div class="div">		{</div><div class="toggle">
+			T item = stack.back();
+			stack.pop_back();
+			globalData++;
+			return item;
+		}
+	}</div>
+
+}
+#endif
+
+</pre>
+</hr>
+</body>
+</html>
